@@ -1,0 +1,13 @@
+.header__container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 5.5rem;
+    background-color: var(--grey-1);
+    box-shadow: 0 0.25rem 2rem var(--grey-2);
+
+    figure {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
