@@ -1,0 +1,32 @@
+.total_card__container {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--grey-2);
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+    box-sizing: border-box;
+    width: 22.1875rem;
+    height: 6rem;
+    
+
+    .title__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .total__container {
+        box-sizing: border-box;
+
+        span {
+            color: var(--color-primary);
+        }
+    }
+}
+
+@media (max-width:900px) {
+    .total_card__container {
+        width: 100%;
+    }
+}

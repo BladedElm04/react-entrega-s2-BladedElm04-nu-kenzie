@@ -1,4 +1,23 @@
 .main__container {
-    width: 80%;
+    width: 65%;
     margin: 0 auto;
+    display: flex;
+    margin-top: 3rem;
+    gap: 3rem;
+    margin-bottom: 2rem;
+
+    .form_section__container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+}
+
+@media (max-width:900px) {
+    .main__container {
+        flex-direction: column;
+        width: 90%;
+        margin-bottom: 0.5rem;
+    }
 }

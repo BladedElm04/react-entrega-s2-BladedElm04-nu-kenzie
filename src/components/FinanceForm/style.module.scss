@@ -3,22 +3,26 @@
     flex-direction: column;
     width: 22.1875rem;
     padding: 1rem;
-    margin-top: 3rem;
     border: 1px solid var(--grey-3);
     gap: 1rem;
+    box-sizing: border-box;
 
     
-    span {
-        color: var(--grey-3);
-        
-    }
-    input {
-        border: none;
-        background-color: var(--grey-1);
-        border-radius: 0.5rem;
-        height: 3.3rem;
-        padding-left: 1rem;
-        color: var(--grey-3);
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        input {
+            border: none;
+            background-color: var(--grey-1);
+            border-radius: 0.5rem;
+            height: 3.3rem;
+            padding-left: 1rem;
+        }
+        span {
+            color: var(--grey-3);
+        }
     }
     select {
         border: none;
@@ -42,5 +46,11 @@
         &:hover{
             background-color: var(--color-primary-2);
         }
+    }
+}
+
+@media (max-width:900px) {
+    .form__container {
+        width: 100%;
     }
 }

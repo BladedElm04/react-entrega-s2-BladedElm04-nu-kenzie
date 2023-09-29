@@ -1,25 +1,22 @@
-.title1 {
+.title {
     font-weight: bold;
-    font-size: 2.375rem;
     font-family: "Nunito", sans-serif;
-}
 
-.title2 {
-    font-weight: bold;
-    font-size: 1.375rem;
-    font-family: "Nunito", sans-serif;
-}
+    &.one {
+        font-size: 2.375rem;
+    }
 
-.title3 {
-    font-weight: bold;
-    font-size: 1rem;
-    font-family: "Nunito", sans-serif;
-}
+    &.two {
+        font-size: 1.375rem;
+    }
 
-.title4 {
-    font-weight: bold;
-    font-size: 0.75rem;
-    font-family: "Nunito", sans-serif;
+    &.three {
+        font-size: 1rem;
+    }
+
+    &.four {
+        font-size: 0.75rem;
+    }
 }
 
 .headline {

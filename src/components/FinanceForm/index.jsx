@@ -1,20 +1,52 @@
+import { useState } from "react"
+import { Input } from "./Input"
+import { Select } from "./Select"
 import styles from "./style.module.scss"
 
-export const FinanceForm = () => {
+export const FinanceForm = ({addList}) => {
+    const [description, setDescription] = useState("")
+    const [value, setValue] = useState("")
+    const [type, setType] = useState("Entrada")
+
+    const submit = (e) => {
+        e.preventDefault()
+        addList(description, value, type)
+
+        setDescription("")
+        setValue("")
+    }
     return (
-        <form className={styles.form__container} action="">
+        <form className={styles.form__container} onSubmit={submit}>
+            <Input 
+                label={"Descrição"}
+                id={"description"}
+                value={description}
+                type={"text"}
+                placeholder={"Digite aqui sua descrição"}
+                setValue={setDescription}
+                span={"Ex: Compra de roupas"}
+            />
+
+            <Input 
+                label={"Valor (R$)"}
+                id={"value"}
+                value={value}
+                type={"number"}
+                placeholder={"1"}
+                setValue={setValue}
+                span={""}
+            />
             
-            <label className="body" htmlFor="description">Descrição</label>
-            <input className="headline" id="description" type="text" placeholder="Digite aqui sua descrição" />
-            <span className="body">Ex: Compra de roupas</span>
-            <label className="body" htmlFor="value">Valor (R$)</label>
-            <input id="value" type="number" placeholder="1" />
-            <label className="body" htmlFor="value-type">Tipo de valor</label>
-            <select name="value_type" id="value-type">
-                <option value="entry">Entrada</option>
-                <option value="expense">Despesa</option>
-            </select>
-            <button>Inserir valor</button>
+            <Select 
+                label={"Tipo de valor"}
+                id={"select"}
+                value={type}
+                setValue={setType}
+                option1={"Entrada"}
+                option2={"Despesa"}
+            />
+
+            <button type="submit">Inserir valor</button>
         </form>
     )
 }
